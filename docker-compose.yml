@@ -1,0 +1,19 @@
+services:
+  web:
+    build: .
+    container_name: django_practice_20
+    command: sh -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    ports:
+        - "8001:8000"
+    env_file:
+      - .env
+    environment:
+      DJANGO_DATABASE_DIR: /data
+    volumes:
+      - sqlite_data:/data
+      - uploads_data:/app/mysite/uploads
+    restart: always
+
+volumes:
+  sqlite_data:
+  uploads_data:

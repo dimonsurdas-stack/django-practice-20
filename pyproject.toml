@@ -1,0 +1,23 @@
+[project]
+name = "django-practice-20"
+version = "0.1.0"
+description = "Django project for practical work 20"
+authors = [
+    {name = "Dima",email = "Dimonsurdas@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "django (==4.2.20)",
+    "django-debug-toolbar (==4.0.0)",
+    "django-filter (==22.1)",
+    "djangorestframework (==3.14.0)",
+    "pillow (==10.4.0)",
+    "pytz (==2022.7.1)",
+    "sqlparse (==0.4.2)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
